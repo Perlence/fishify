@@ -8,7 +8,9 @@ import sys
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description='Modify environment in fish shell with variables from '
+                    'script output.')
     parser.add_argument('ARGS', nargs='*')
     args = parser.parse_args()
 
@@ -43,11 +45,8 @@ def dict_diff(this, that):
 
 
 def fishify(env):
-    return '; and '.join('set -x {} {}'.format(k, v) for k, v in env.iteritems())
-
-
-def escape(string):
-    return string.replace(' ', '\ ')
+    return '; and '.join('set -x {} {}'.format(k, v)
+                         for k, v in env.iteritems())
 
 
 if __name__ == '__main__':
