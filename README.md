@@ -7,7 +7,7 @@ Modify environment in fish shell with variables from script output.
 1.  Clone the repository:
 
     ```fish
-    git clone https://github.com/Perlence/wikigenre.git
+    git clone https://github.com/Perlence/fishify.git
     ```
 
 2.  Install the package:
