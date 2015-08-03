@@ -22,12 +22,12 @@ fishify is used to modify environment variables in fish shell from output of pro
 
 It can acquire environment variable declarations from stdin:
 
-    ```fish
-    eval (godep env | fishify)
-    ```
+```fish
+eval (godep env | fishify)
+```
 
 It can also execute a program with given args and watch environment changes:
 
-    ```fish
-    eval (fishify ssh-agent)
-    ```
+```fish
+eval (fishify ssh-agent)
+```
