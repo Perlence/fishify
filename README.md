@@ -1,6 +1,6 @@
 # fishify
 
-Modify environment in fish shell with variables from script output.
+Modify environment in fish shell with variables from script output, e.g. `ssh-add`.
 
 ## Installation
 

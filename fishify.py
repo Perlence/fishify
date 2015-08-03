@@ -12,7 +12,7 @@ import six
 def main():
     parser = argparse.ArgumentParser(
         description='Modify environment in fish shell with variables from '
-                    'script output.')
+                    'script output, e.g. ssh-add.')
     parser.add_argument('ARGS', nargs='*')
     args = parser.parse_args()
 

@@ -9,7 +9,7 @@ setup(
     author='Sviatoslav Abakumov',
     author_email='dust.harvesting@gmail.com',
     description='Modify environment in fish shell with variables from script '
-                'output.',
+                'output, e.g. ssh-add.',
     long_description=README,
     url='https://github.com/Perlence/fishify',
     download_url='https://github.com/Perlence/fishify/archive/master.zip',
