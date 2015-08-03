@@ -6,6 +6,8 @@ import os
 from subprocess import check_output
 import sys
 
+import six
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -34,7 +36,11 @@ def parse_printenv(output):
 
     env = {}
     for line in lines:
-        var, val = line.split('=', 1)
+        try:
+            decoded = line.decode('utf-8')
+        except AttributeError:
+            decoded = line
+        var, val = decoded.split('=', 1)
         env[var] = val.strip()
     return env
 
@@ -46,7 +52,7 @@ def dict_diff(this, that):
 
 def fishify(env):
     return '; and '.join('set -x {} {}'.format(k, v)
-                         for k, v in env.iteritems())
+                         for k, v in six.iteritems(env))
 
 
 if __name__ == '__main__':

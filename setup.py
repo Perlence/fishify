@@ -20,7 +20,9 @@ setup(
             'fishify = fishify:main',
         ],
     },
-    install_requires=[],
+    install_requires=[
+        'six',
+    ],
     classifiers=[
         'Development Status :: 3 - Stable',
         'Environment :: Console',
@@ -31,6 +33,7 @@ setup(
         'Operating System :: MacOS :: MacOS X',
         'Operating System :: POSIX :: Linux',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python',
         'Topic :: System :: Shells',
     ]
